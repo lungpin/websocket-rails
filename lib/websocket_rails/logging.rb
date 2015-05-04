@@ -72,6 +72,7 @@ module WebsocketRails
     end
 
     def log_event?(event)
+      return false
       if event.is_internal?
         WebsocketRails.config.log_internal_events?
       else
